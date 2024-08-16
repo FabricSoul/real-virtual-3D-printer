@@ -1,0 +1,17 @@
+[package]
+name = "real-virtual-3d-printer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.14.1"
+iyes_perf_ui = "0.3.0"
+bevy_panorbit_camera = "0.19.2"
+
+# Enable max optimizations for dependencies, but not for our code:
+[profile.dev.package."*"]
+opt-level = 3
+
+# Enable only a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 1
